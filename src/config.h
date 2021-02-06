@@ -78,7 +78,9 @@
 #if THERMOTRONIC != 1 //No serialport implementet yet
 // Note we should only enable of of the following at one time
 /* we support UART */
-//#define COM_UART 1
+#if !RFM
+#define COM_UART 1
+#endif
 
 /* Our default Adress, if not set or invalid */
 /* #define COM_DEF_ADR 1 */
